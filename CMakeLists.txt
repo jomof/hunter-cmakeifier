@@ -7,6 +7,7 @@ HunterGate(
 project(example_project)
 hunter_add_package(SDL2)
 find_package(SDL2 CONFIG REQUIRED)
-add_library(example_target SHARED)
-target_link_libraries(example_target SDL2::SDL2-static)
+message(SDL2::SDL2-static)
+#add_library(example_target SHARED)
+#target_link_libraries(example_target SDL2::SDL2-static)
 

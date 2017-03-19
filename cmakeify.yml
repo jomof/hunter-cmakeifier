@@ -1,0 +1,6 @@
+targets: [android]
+includes: [include]
+android:
+  lib: libsdl.a
+  ndk:
+    platforms: [10]

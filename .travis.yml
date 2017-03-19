@@ -1,0 +1,21 @@
+
+language: c++
+matrix:
+  include:
+  - os: linux
+    script:
+    - wget https://libsdl.org/release/SDL2-2.0.5.zip
+    - unzip SDL2-2.0.5.zip > nul
+    - cp cmakeify.yml SDL2-2.0.5/cmakeify.yml
+    - chmod +x cmakeify
+    - ./cmakeify -wf SDL2-2.0.5 --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
+annoy:
+  provider: releases
+  api_key:
+    secure: W0NiAxk1KuJw/jxwyUlPZ2ri6GXCP0O0zfXpWxkvuIRFU0OiMjgv1Xp3mPmfqbjJMxlqaL/ExS+ZopUWYZGOmvP9alvHjbZXW7xX1VMFmPW8iCKbBZNBtx4+9GyPyCxN8h2B1xoSiUd7TstRA7CToZej8E1W77vCB33CAWowOKER2IPrVD5MKWmxlN37CABhsHyfUmNzxgl2NE1mrHrv4NE7BDVaDE3IZxrtNDAmgSZ2YjhO/hBWxTqo91FTAsPz/26fCpJsQJ4tQl/kp4U0SP0FdzAUdNKaABU2CJri/nMoOFFbqmwg71QFWFu4bma5rjRy9me5noygEuIXi9lo+1Jrsym4sBbYHm8Fti79Z/Gnv79WJDvAXtQA2olm7OcWM3nDTlh2GmfWUhAbWfinDT5VLIhJKcAvONF55FwT7Ab407J0IgQfUrmUzlgPw5HZ0x61ZqAkKcPmKbeMCZnYHzEY/uiMZvMHKqGS8qTYyr1tpC+OCl3Wb9HIzJjEOK2WP++MmwIy+Zu0ofAPsIqLzc0QpSko8LCjB0++oJgeZy7GD+Mv/wkVVfCnhJvqqio7LZrwMi94ZRassRKQw+gkbYlnenvTYGobcUR2r9fzxh0ObK6bh+wDqn70ydXPLeeiIKCEyqFCv+AaeLk+hz/as3kPCFodn1AdfoIOq7oe7RI=
+  skip_cleanup: true
+  true: 
+    tags: true
+  file: 
+  - ./build/zips/cdep-manifest.yml
+  - ./SDL2-2.0.5.zip

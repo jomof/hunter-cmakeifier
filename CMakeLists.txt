@@ -7,7 +7,7 @@ HunterGate(
 project(example_project)
 hunter_add_package(SDL2)
 find_package(SDL2 CONFIG REQUIRED)
-message("- dir:" SDL2_DIR)
-message("- version:" SDL2_VERSION)
+message("- dir: " ${SDL2_DIR})
+message("- version: " ${SDL2_VERSION})
 
 

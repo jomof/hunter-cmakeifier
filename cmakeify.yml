@@ -3,4 +3,4 @@ android:
   lib: libsdl.a
   ndk:
     runtimes: [c++, gnustl, stlport]
-    platforms: [12, 21]
+    platforms: [16, 19, 21]

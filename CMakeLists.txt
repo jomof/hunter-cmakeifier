@@ -9,7 +9,7 @@ hunter_add_package(SDL2)
 find_package(SDL2 CONFIG REQUIRED)
 add_library(example_library example.cpp)
 target_link_libraries(example_library SDL2::SDL2)
-add_custom_command(TARGET copy POST_BUILD
+add_custom_command(TARGET example_library POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E
                    copy ${SDL2_DIR}/lib/libSDL2.a ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 

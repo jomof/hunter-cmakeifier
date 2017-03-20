@@ -7,6 +7,6 @@ HunterGate(
 project(example_project)
 hunter_add_package(SDL2)
 find_package(SDL2 CONFIG REQUIRED)
-file(COPY ${SDL2_DIR}/lib/libSDL2.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
+file(COPY ${SDL2_DIR}/lib/libSDL2.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 
 

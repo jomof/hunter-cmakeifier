@@ -13,7 +13,7 @@ find_package(SDL2 CONFIG REQUIRED)
 #if (ANDROID) 
 #  target_compile_options(example_library PRIVATE -DGL_GLEXT_PROTOTYPES)
 #endif()
-file(COPY ${SDL2_ROOT}/lib/libSDL2.a DESTINATION .)
+file(COPY ${SDL2_ROOT}/lib/libSDL2.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 ##add_custom_command(TARGET example_library PRE_BUILD
 #                   COMMAND ${CMAKE_COMMAND} -E
 #                   copy ${SDL2_ROOT}/lib/libSDL2.a .)

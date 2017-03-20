@@ -2,10 +2,7 @@
 language: c++
 matrix:
   include:
-  - os: linux
+  - os: osx
     script:
     - chmod +x cmakeify
     - ./cmakeify -wf . --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
-    - ls /home/travis/.hunter/_Base/6974c21/5b02e56/8c546ae/Install/lib/cmake/SDL2/lib/
-    
-

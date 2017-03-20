@@ -13,6 +13,7 @@ add_library(example_library SHARED example.cpp)
 #if (ANDROID) 
 #  target_compile_options(example_library PRIVATE -DGL_GLEXT_PROTOTYPES)
 #endif()
+file(COPY  ${SDL2_ROOT}/lib/libSDL2.a DESTINATION .)
 add_custom_command(TARGET example_library PRE_BUILD
                    COMMAND ${CMAKE_COMMAND} -E
                    copy ${SDL2_ROOT}/lib/libSDL2.a .)

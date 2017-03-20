@@ -5,6 +5,6 @@ matrix:
   - os: linux
     script:
     - chmod +x cmakeify
-    - ./cmakeify --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
+    - ./cmakeify -wf . --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}
     
 

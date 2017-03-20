@@ -2,7 +2,7 @@
 language: c++
 matrix:
   include:
-  - os: osx
+  - os: linux
     script:
     - chmod +x cmakeify
     - ./cmakeify -wf . --group-id com.github.jomof --artifact-id sdl2 --target-version ${TRAVIS_TAG}

@@ -7,16 +7,16 @@ HunterGate(
 project(example_project)
 hunter_add_package(SDL2)
 find_package(SDL2 CONFIG REQUIRED)
-add_library(example_library SHARED example.cpp)
+#add_library(example_library SHARED example.cpp)
 #target_link_libraries(example_library SDL2::SDL2-static)
 #add_custom_target(copy)
 #if (ANDROID) 
 #  target_compile_options(example_library PRIVATE -DGL_GLEXT_PROTOTYPES)
 #endif()
-file(COPY  ${SDL2_ROOT}/lib/libSDL2.a DESTINATION .)
-add_custom_command(TARGET example_library PRE_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E
-                   copy ${SDL2_ROOT}/lib/libSDL2.a .)
+file(COPY ${SDL2_ROOT}/lib/libSDL2.a DESTINATION .)
+##add_custom_command(TARGET example_library PRE_BUILD
+#                   COMMAND ${CMAKE_COMMAND} -E
+#                   copy ${SDL2_ROOT}/lib/libSDL2.a .)
 
 
 

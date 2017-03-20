@@ -2,4 +2,5 @@ targets: [android]
 android:
   lib: libsdl.a
   ndk:
-    platforms: [10, 21]
+    runtimes: [c++, gnustl, stlport]
+    platforms: [12, 21]

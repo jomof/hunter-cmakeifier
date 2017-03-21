@@ -5,7 +5,7 @@ HunterGate(
     SHA1 "6974c2150fc0d3b09de3ad1efcbf15d360647ffa"
 )
 #set(pkg "SDL2")
-set(pkg "FREETYPE")
+set(pkg "freetype")
 project(example_project)
 hunter_add_package(${pkg})
 if (CMAKE_LIBRARY_OUTPUT_DIRECTORY)

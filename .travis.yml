@@ -7,3 +7,4 @@ matrix:
     - chmod +x cmakeify
     - ./cmakeify -wf . --group-id com.github.jomof --artifact-id freetype --target-version ${TRAVIS_TAG:-0.0.0}
     - ./cdep
+    - ./cmakeify -wf .cdep/examples/cmake

@@ -8,7 +8,7 @@ HunterGate(
 set(pkg "freetype")
 project(example_project)
 hunter_add_package(${pkg})
-file(COPY ${${pkg}_ROOT}/lib/lib${pkg}.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
+file(COPY ${${pkg}_ROOT}/lib/*.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 
 
 

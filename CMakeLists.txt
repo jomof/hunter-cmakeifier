@@ -20,7 +20,3 @@ else()
     message(STATUS "${_variableName}=${${_variableName}}")
   endforeach()
 endif()
-
-
-
-

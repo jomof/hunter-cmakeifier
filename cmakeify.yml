@@ -4,6 +4,7 @@ android:
   ndk:
     runtimes: [c++, gnustl, stlport]
     platforms: [16, 19, 21]
+    abis: [x86]
 example: |
   #include <ft2build.h>
   #include FT_FREETYPE_H

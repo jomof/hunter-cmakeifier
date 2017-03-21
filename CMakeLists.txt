@@ -14,7 +14,7 @@ set(RELATIVE_INCLUDE "include/freetype2")
 
 project(example_project)
 hunter_add_package(${pkg})
-find_package(freetype 2.6.2 CONFIG REQUIRED)
+find_package(freetype "2.6.2 (32-bit)" CONFIG REQUIRED)
 message("HUNTER_${pkg}_VERSION=${HUNTER_${pkg}_VERSION}")
 message("${PKG}_ROOT=${${PKG}_ROOT}")
 message("Expected library: ${${PKG}_ROOT}/lib/lib${pkg}.a")

@@ -8,7 +8,14 @@ HunterGate(
 set(pkg "freetype")
 project(example_project)
 hunter_add_package(${pkg})
-file(COPY ${${pkg}_ROOT}/lib/*.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
+if (CMAKE_LIBRARY_OUTPUT_DIRECTORY)
+  file(COPY ${${pkg}_ROOT}/lib/*.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
+else()
+  get_cmake_property(_variableNames VARIABLES)
+  foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+  endforeach()
+endif()
 
 
 

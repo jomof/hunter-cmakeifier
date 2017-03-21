@@ -5,16 +5,17 @@ HunterGate(
     SHA1 "6974c2150fc0d3b09de3ad1efcbf15d360647ffa"
 )
 #set(pkg "SDL2")
-set(pkg "freetype")
+set(pkg "FREETYPE")
 project(example_project)
 hunter_add_package(${pkg})
 if (CMAKE_LIBRARY_OUTPUT_DIRECTORY)
-  file(COPY ${${pkg}_ROOT}/lib/*.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
+  file(COPY ${${pkg}_ROOT}/lib/lib${pkg}.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 else()
-  get_cmake_property(_variableNames VARIABLES)
-  foreach (_variableName ${_variableNames})
-    message(STATUS "${_variableName}=${${_variableName}}")
-  endforeach()
+  message("${${pkg}_ROOT}/lib/lib${pkg}.a")
+#  get_cmake_property(_variableNames VARIABLES)
+#  foreach (_variableName ${_variableNames})
+#    message(STATUS "${_variableName}=${${_variableName}}")
+#  endforeach()
 endif()
 
 

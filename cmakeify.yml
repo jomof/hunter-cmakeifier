@@ -1,8 +1,6 @@
 targets: [android]
 android:
-  lib: libSDL2.a
+  lib: libfreetype.a
   ndk:
     runtimes: [c++, gnustl, stlport]
     platforms: [16, 19, 21]
-iOS:
-  lib: libSDL2.a

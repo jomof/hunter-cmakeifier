@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.0.2)
+set(CMAKE_VERBOSE_MAKEFILE on)
+set(HUNTER_DEBUG on)
+
 include("cmake/HunterGate.cmake")
 HunterGate(
     URL "https://github.com/ruslo/hunter/archive/v0.16.15.tar.gz"

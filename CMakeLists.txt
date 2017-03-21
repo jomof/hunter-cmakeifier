@@ -14,6 +14,11 @@ message("${PKG}_ROOT=${${PKG}_ROOT}")
 message("Expected library: ${${PKG}_ROOT}/lib/lib${pkg}.a")
 if (CMAKE_LIBRARY_OUTPUT_DIRECTORY)
   file(COPY ${${PKG}_ROOT}/lib/lib${pkg}.a DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
+else()
+  get_cmake_property(_variableNames VARIABLES)
+  foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+  endforeach()
 endif()
 
 

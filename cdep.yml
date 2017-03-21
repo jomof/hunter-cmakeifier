@@ -1,0 +1,5 @@
+builders: [cmake, cmakeExamples]
+
+dependencies:
+- compile: ./cdep-manifest.yml
+
